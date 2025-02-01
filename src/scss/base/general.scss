@@ -1,0 +1,176 @@
+@import '../helpers/mixins.scss';
+@import '../helpers/variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+div,
+input,
+textarea,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+    outline: none;
+    font-size: inherit;
+    background: transparent;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+img,
+picture,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+table {
+    border-spacing: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -webkit-locale: auto;
+    white-space: normal;
+    font-family: $ff-main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 90px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+.p-layout {
+    padding: 80px 0 20px;
+
+    @include max(laptop) {
+        padding: 61px 0 20px;
+    }
+
+    @include max(mobile) {
+        padding: 61px 0 0;
+    }
+
+    .section+.section {
+        margin-top: 16px;
+    }
+
+    .section--full+.section--full {
+        margin-top: 0;
+    }
+
+    .sidebar-layout+.section {
+        margin-top: 16px;
+    }
+}
+
+.p-section {}
